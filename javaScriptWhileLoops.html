@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Functions</title>
+
+  </head>
+  <body>
+    <script type="text/javascript">
+      var tweets= ["Hello","Fuck you","Shut up","You shut up!"];
+      var tweetsString="";//avoids undefined, bc it needs starting value to change
+      var i=0;
+      while(i<tweets.length) {
+        tweetsString=tweetsString+"<p>"+tweets[i]+"</p>";
+        i++;
+      }
+      document.getElementById("div").innerHTML=tweetsString;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!Doctype html>
+  <head>
+    <title>JavaScript</title>
+    <style type="text/css">
+
+      body {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1 id="first id">JavaScript</h1>
+    <button onclick=alert("Hello")>Click me</button>
+    <button id="buttonClicked">Button Clicked</button><br>
+    <p id="textToBeChanged">Text to be changed</p>
+    <button id="textChanger">Change Text</button>
+    <p id="secondParagraph">javaScript is ...</p>
+    <button id="secondParagraphButton">Second Paragraph Button</button><br>
+    <button id="thinAir">Thin Air</button>
+    <p id="thinAirText"></p>
+    <button id="disappear">Disappear</button>
+    <button id="stylingButton">Styling Button</button>
+    <p id="styledText">Style this bitch</p>
+
+    <script type="text/javascript">
+      alert("page is loaded bitch");
+      //adds pop up box with message
+      document.getElementById("first id").innerHTML="Yo!";
+      /* changes the text of
+      thing  */
+      document.getElementById("buttonClicked").onclick=function() {
+        alert("button clicked");
+      } //pops up alert after button is pressed
+      document.getElementById("textChanger").onclick=function() {
+        document.getElementById("textToBeChanged").innerHTML="I changed that shit bitch";
+      } //changes the text when clicked
+      document.getElementById("secondParagraphButton").onclick=function(){
+        document.getElementById("secondParagraph").innerHTML="I think "+document.getElementById("secondParagraph").innerHTML+" fun!";
+      } //appends to text when clicked
+      document.getElementById("thinAir").onclick=function() {
+        document.getElementById("thinAirText").innerHTML="<h1>Abra Cadabra bitch</h1>"
+           }//adds text when clicked and can be formatted in string to h1
+      document.getElementById("disappear").onclick=function() {
+        document.getElementById("thinAirText").style.display= "none";
+      }
+      document.getElementById("stylingButton").onclick=function() {
+        document.getElementById("styledText").style.color="red"
+        document.getElementById("styledText").style.fontSize="50px";
+      } //styles color and fotn size of text
+    </script>
+
+
+  </body>
+
+
+
+
+
+</html>

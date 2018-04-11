@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>How Many Fingers</title>
+
+  </head>
+  <body>
+    <p>What is the magic number?</p>
+    <p><select id="magicNumber"></p>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+  </select>
+    <p><button id="checkMagicNumber">Enter></button></p>
+
+
+    <script type="text/javascript">
+      document.getElementById("checkMagicNumber").onclick=function() {
+        var magicNumberEntered=document.getElementById("magicNumber").value;
+        i=0;
+        while (magicNumberGuess!=magicNumberEntered) {
+          i++;
+          var magicNumberGuess=Math.floor(Math.random() * 6) + 1;
+          //alert ("The guess is number "+i +" and the guess was: "+magicNumberGuess);
+          if (magicNumberGuess==magicNumberEntered) {
+            alert ("It got the correct answer which is: "+magicNumberGuess+"and it took "+i+" tries.");
+            break
+          }
+
+        }
+      }
+
+    </script>
+</html>

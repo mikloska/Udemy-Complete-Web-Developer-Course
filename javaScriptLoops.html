@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loops</title>
+
+  </head>
+  <body>
+    <div id="div">
+    </div>
+    <script type="text/javascript">
+      var tweets= ["Hello","Fuck you","Shut up","You shut up!"];
+      var tweetsString="";//avoids undefined, bc it needs starting value to change
+      for (var i=0; i<tweets.length; i++) { //when I put semi-colon after 'i++', it never ran loop
+        //alert(tweets[i]);
+        tweetsString=tweetsString+"<p>"+tweets[i]+"</p>";
+      }
+      document.getElementById("div").innerHTML=tweetsString;
+    </script>
+  </body>
+</html>
