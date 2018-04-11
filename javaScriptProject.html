@@ -17,7 +17,8 @@
     <p id="time">It took:<p>
     <div id="shape"><div>
     <script type="text/javascript">
-      document.getElementById("shape").onclick= function() {
+      var shape= document.getElementById("shape")
+      shape.onclick= function() {
           var arr=[position,color,form,width,height,shape,time];
           var position= ["float:right;","float:left;","margin: 0 auto;","margin-top:300px;",
           "float:right;margin-top:500px;","float:left; margin-top:500px;","margin-top: 300px;margin:0 auto;"];
@@ -28,11 +29,23 @@
           var width=["width:200px;","width:100px;","width:600px","width:50px;"];
           var height=["height:200px;","height:100px;","height:50px;","height:600px;"];
           var time=[3000,1000,500,5000,9000,200]
-          var shape= document.getElementById("shape")
           i=Math.floor(Math.random() * arr.length)
           setTimeout (function alter() {
               shape.style=position[i]+color[i]+form[i]+width[i]+height[i];
+              var startTime = new Date();
           }, time[i])
+
+          function end() {
+            endTime = new Date();
+            var timeDiff = endTime - startTime; //in ms
+            // strip the ms
+            timeDiff /= 1000;
+
+            // get seconds
+            var seconds = Math.round(timeDiff);
+            console.log(seconds + " seconds");
+          }
+
         }
 
 
